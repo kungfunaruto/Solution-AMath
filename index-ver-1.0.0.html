@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A-Math Solution</title>
+  <link rel="stylesheet" href="navbar.css">
+  <link rel="stylesheet" href="styles-ver-1.0.0.css">
+</head>
+
+<body>
+  <nav class="app-nav">
+    <a class="app-nav__brand" href="index.html">A-Math Solution</a>
+    <div class="app-nav__versions">
+      <a class="app-nav__link" href="index.html">Select Version</a>
+      <a class="app-nav__link is-active" href="index-ver-1.0.0.html">v1.0.0</a>
+      <a class="app-nav__link" href="index-ver-1.0.1.html">v1.0.1</a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="mode">
+      <button id="mode1" class="active">Bingo 8</button>
+      <button id="mode2">Bingo Fix Position</button>
+    </div>
+
+    <div class="show-pawn-input" onclick="selectSlotTopPawn()"></div>
+    <div class="lock-container" id="lockContainer"></div>
+    <button id="addLock" class="lock-add" style="margin-bottom:15px; display:none;">+</button>
+
+    <div class="pawn">
+      <input type="button" value="1">
+      <input type="button" value="2">
+      <input type="button" value="3">
+      <input type="button" value="4">
+      <input type="button" value="5">
+      <input type="button" value="+">
+    </div>
+
+    <div class="pawn">
+      <input type="button" value="6">
+      <input type="button" value="7">
+      <input type="button" value="8">
+      <input type="button" value="9">
+      <input type="button" value="10">
+      <input type="button" value="-">
+    </div>
+
+    <div class="pawn">
+      <input type="button" value="11">
+      <input type="button" value="12">
+      <input type="button" value="13">
+      <input type="button" value="14">
+      <input type="button" value="15">
+      <input type="button" value="x">
+    </div>
+
+    <div class="pawn">
+      <input type="button" value="16">
+      <input type="button" value="17">
+      <input type="button" value="18">
+      <input type="button" value="19">
+      <input type="button" value="20">
+      <input type="button" value="÷">
+    </div>
+
+    <div class="pawn">
+      <input type="button" value="0" class="zero">
+      <input type="button" value="+/-">
+      <input type="button" value="x/÷">
+      <input type="button" value="?">
+      <input type="button" value="=">
+    </div>
+
+    <div class="control">
+      <input type="button" value="Back">
+      <input type="button" value="Clear">
+      <input type="button" value="Submit">
+    </div>
+  </div>
+
+  <div class="solutions-container" id="solutionsContainer"></div>
+  <script src="script-ver-1.0.0.js"></script>
+</body>
+
+</html>
