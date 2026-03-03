@@ -83,12 +83,12 @@
   .show-pawn-input {
     border: 1.5px solid var(--border);
     border-radius: var(--radius-md);
-    min-height: 65px;
+    min-height: 50px;
     margin-bottom: 16px;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 5px;
+    gap: 3px;
     flex-wrap: wrap;
     padding: 4px;
     background: var(--surface-2);
@@ -120,11 +120,14 @@
   }
   .tile-pt {
     position: absolute;
-    bottom: 3px; right: 3px;
-    font-size: 11px;
+    bottom: clamp(4px, 0.18em, 4px);
+    right: clamp(4px, 0.18em, 4px);
+    font-size: clamp(4px, 0.6em, 12px);
     font-weight: 700;
     color: var(--text-muted);
     line-height: 1;
+    letter-spacing: 0.01em;
+    pointer-events: none;
   }
   
   /* ── Pawn pad ── */
@@ -537,7 +540,7 @@
   @media (max-width: 700px) {
     body { flex-direction: column; align-items: center; padding-left: 10px; padding-right: 10px; }
     .container { width: 100%; padding: 15px; margin-right: 0; margin-top: 12px; }
-    .pawn-slot { min-width: 39px; height: 42px; font-size: 19px; }
+    .pawn-slot { min-width: 34px; height: 36px; font-size: 15px; }
     .pawn-btn-wrap input[type=button] { padding: 14px 4px 20px; font-size: 20px; }
     .control input { padding: 13px; font-size: 15px; }
     .solutions-container {
