@@ -1,0 +1,98 @@
+/* ═══════════════════════════════════════════════
+   navbar.css  —  shared across all versions
+   Palette: matches linear-gradient(135deg, #d9f1ff, #fce2ff)
+   ═══════════════════════════════════════════════ */
+
+   /* @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600&display=swap'); */
+
+   :root {
+     --nav-h:      52px;
+     --brand-a:    #ff7b54;
+     --brand-b:    #ffb347;
+     /* pastel surface tints */
+     --nav-bg:     rgba(240, 248, 255, 0.72);   /* tinted from #d9f1ff */
+     --nav-border: rgba(180, 210, 240, 0.50);
+     --text-body:  #3a3a4a;
+     --text-muted: #8888a0;
+     --text-faint: #b0b0c8;
+   }
+   
+   /* ── Reset ── */
+   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+   
+   body {
+     font-family: "DM Sans", "Kanit", sans-serif;
+     padding-top: var(--nav-h);
+   }
+   
+   /* ── Shell ── */
+   .app-nav {
+     position: fixed;
+     top: 0; left: 0; right: 0;
+     z-index: 9998;
+     height: var(--nav-h);
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     padding: 0 28px;
+     background: var(--nav-bg);
+     backdrop-filter: blur(20px) saturate(1.6);
+     -webkit-backdrop-filter: blur(20px) saturate(1.6);
+     border-bottom: 1px solid var(--nav-border);
+     /* very subtle inner highlight at top */
+     box-shadow:
+       inset 0 1px 0 rgba(255,255,255,0.70),
+       0 1px 16px rgba(180,200,240,0.18);
+   }
+   
+   /* ── Brand ── */
+   .app-nav__brand {
+     font-size: 0.95rem;
+     font-weight: 600;
+     letter-spacing: 0.03em;
+     text-decoration: none;
+     color: var(--text-body);
+     white-space: nowrap;
+     transition: opacity 0.2s;
+   }
+   .app-nav__brand:hover { opacity: 0.7; }
+   
+   /* ── Nav links ── */
+   .app-nav__versions {
+     display: flex;
+     align-items: center;
+     gap: 2px;
+   }
+   
+   .app-nav__link {
+     font-size: 0.78rem;
+     font-weight: 400;
+     letter-spacing: 0.02em;
+     color: var(--text-muted);
+     text-decoration: none;
+     padding: 5px 12px;
+     border-radius: 20px;
+     border: 1px solid transparent;
+     transition: color 0.2s, background 0.2s, border-color 0.2s;
+     white-space: nowrap;
+   }
+   
+   .app-nav__link:hover {
+     color: var(--text-body);
+     background: rgba(255, 255, 255, 0.55);
+     border-color: rgba(180, 210, 240, 0.60);
+   }
+   
+   .app-nav__link.is-active {
+     font-weight: 500;
+     color: var(--brand-a);
+     background: rgba(255, 123, 84, 0.08);
+     border-color: rgba(255, 123, 84, 0.25);
+   }
+   
+   /* ── Responsive ── */
+   @media (max-width: 480px) {
+     .app-nav { padding: 0 14px; }
+     .app-nav__link { padding: 4px 9px; font-size: 0.73rem; }
+     .app-nav__brand { font-size: 0.88rem; }
+   }
