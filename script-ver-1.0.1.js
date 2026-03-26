@@ -128,7 +128,7 @@ function* permsGen(arr) {
 // ══════════════════════════════════════════════════════════════
 
 let filled        = [];
-let maxFilled     = 9;
+let maxFilled     = 15;
 let currentTarget = "top";
 let mode          = "mode1";
 let solutions     = [];
